@@ -182,3 +182,31 @@
 .qr-loading{height:150px;display:grid;place-items:center;font-size:10px;color:#788276}
 @media(max-width:850px){.signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signature-featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.signature-featured>img{height:100%;min-height:230px}.gallery-grid{grid-template-rows:160px 160px}.qr-panel{padding:32px}}
 @media(max-width:600px){.signature-grid{grid-template-columns:1fr;gap:11px}.signature-featured{grid-column:auto;display:flex}.signature-featured>img,.signature-card>img{height:175px;min-height:0}.signature-card-copy{padding:16px}.signature-card-copy h3{font-size:21px}.gallery-heading{display:block}.gallery-heading>p{margin-top:12px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 135px 135px;gap:8px}.gallery-grid .gallery-tall{grid-column:1/-1;grid-row:auto}.gallery-grid figcaption{font-size:14px;padding:28px 10px 10px}.qr-panel{grid-template-columns:1fr;justify-items:center;text-align:center;padding:28px 20px;gap:23px}.qr-panel p{font-size:11px}.qr-code-card{width:205px}}
+
+
+/* Multi-page navigation: each main section is presented as its own hash-routed page */
+.site-shell main[data-page]>.hero,
+.site-shell main[data-page]>.intro,
+.site-shell main[data-page]>.featured,
+.site-shell main[data-page]>.signature-section,
+.site-shell main[data-page]>.gallery-section,
+.site-shell main[data-page]>.reviews-section,
+.site-shell main[data-page]>.menu-section,
+.site-shell main[data-page]>.qr-section,
+.site-shell main[data-page]>.visit,
+.site-shell main[data-page]>.quote-band{display:none}
+.site-shell main[data-page="home"]>.hero,
+.site-shell main[data-page="story"]>.intro,
+.site-shell main[data-page="experience"]>.featured,
+.site-shell main[data-page="signature"]>.signature-section,
+.site-shell main[data-page="gallery"]>.gallery-section,
+.site-shell main[data-page="reviews"]>.reviews-section,
+.site-shell main[data-page="menu"]>.menu-section,
+.site-shell main[data-page="qr-menu"]>.qr-section,
+.site-shell main[data-page="visit"]>.visit{display:block}
+.site-shell main[data-page="home"]>.quote-band{display:block}
+.site-shell main[data-page="home"]>.hero{display:flex}
+.site-shell main[data-page="home"]>.hero,.site-shell main[data-page="story"]>.intro,.site-shell main[data-page="experience"]>.featured,.site-shell main[data-page="signature"]>.signature-section,.site-shell main[data-page="gallery"]>.gallery-section,.site-shell main[data-page="reviews"]>.reviews-section,.site-shell main[data-page="menu"]>.menu-section,.site-shell main[data-page="qr-menu"]>.qr-section,.site-shell main[data-page="visit"]>.visit{min-height:65vh}
+.nav a{white-space:nowrap}
+.footer-col a{line-height:1.6}
+@media(max-width:900px){.nav{gap:16px}.nav a{font-size:10px}}
