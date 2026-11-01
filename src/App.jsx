@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import QRCode from 'qrcode';
+import React, { useMemo, useState } from 'react';
 import { ArrowRight, ArrowRight as ArrowRightIcon, ArrowDownToLine, ArrowUpRight, Check, Leaf, Menu as MenuIcon, Minus, Plus, Search, ShoppingBag, Sparkles, X, MessageCircle, Camera, Phone, MapPin, Clock3 } from 'lucide-react';
 import { categories, menuItems } from './menu.js';
 
@@ -13,8 +12,7 @@ const photos = {
   cafe:'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85'
 };
 export default function App(){
- const [qrImage,setQrImage]=useState('');
- useEffect(()=>{QRCode.toDataURL(window.location.href,{width:240,margin:2,color:{dark:'#123323',light:'#fffdf7'}}).then(setQrImage).catch(()=>{});},[]);
+ const qrImage = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=12&color=123323&bgcolor=fffdf7&data='+encodeURIComponent('https://the-velvet-house.onrender.com/#menu');
  const [active,setActive]=useState('All'),[query,setQuery]=useState(''),[cart,setCart]=useState([]),[cartOpen,setCartOpen]=useState(false),[checkoutOpen,setCheckoutOpen]=useState(false),[mobileNav,setMobileNav]=useState(false),[notice,setNotice]=useState(''),[customer,setCustomer]=useState({name:'',phone:'',address:'',notes:''});
  const filtered=useMemo(()=>menuItems.filter(x=>(active==='All'||x.category===active)&&x.name.toLowerCase().includes(query.toLowerCase())),[active,query]);
  const count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>s+x.price*x.qty,0);
