@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import QRCode from 'qrcode';
-import { ArrowRight, ArrowUpRight, Check, Leaf, Menu as MenuIcon, Minus, Plus, Search, ShoppingBag, Sparkles, X, MessageCircle, Camera, Phone, MapPin, Clock3 } from 'lucide-react';
+import { ArrowRight, ArrowRight as ArrowRightIcon, ArrowDownToLine, ArrowUpRight, Check, Leaf, Menu as MenuIcon, Minus, Plus, Search, ShoppingBag, Sparkles, X, MessageCircle, Camera, Phone, MapPin, Clock3 } from 'lucide-react';
 import { categories, menuItems } from './menu.js';
 
 const WA_NUMBER = '918688963586'; // The Velvet House WhatsApp number.
