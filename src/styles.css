@@ -52,3 +52,17 @@
 .reviews-visual>span{font-size:8px;letter-spacing:2px;color:#cbb98f}
 .reviews-ornament{position:absolute;right:28px;bottom:20px;color:#d4b77b;font-size:25px}
 @media(max-width:760px){.reviews-inner{grid-template-columns:1fr;gap:35px}.reviews-visual{min-height:260px;padding:36px 30px;box-shadow:9px 9px 0 #e5dccb}.reviews-copy h2{font-size:43px}.reviews-actions{gap:16px}}
+
+
+/* Google rating and highlights sourced from the supplied business-profile screenshot */
+.google-rating{display:flex;align-items:center;gap:15px;margin:28px 0 18px;padding:18px 0;border-top:1px solid #d8cfbc;border-bottom:1px solid #d8cfbc}
+.google-rating-score{font-family:'Playfair Display',serif;font-size:43px;line-height:1;color:#173326}
+.google-rating-detail{flex:1}
+.google-stars{color:#e3ae24;font-size:19px;letter-spacing:2px;line-height:1.2}
+.google-rating-detail b,.google-rating-detail small{display:block}
+.google-rating-detail b{font-size:12px;margin-top:5px;color:#30483a}
+.google-rating-detail small{font-size:9px;line-height:1.5;color:#879083;margin-top:3px}
+.google-mark{font-weight:700;font-size:25px;background:conic-gradient(from -45deg,#4285f4 0 25%,#34a853 0 50%,#fbbc05 0 75%,#ea4335 0);background-clip:text;-webkit-background-clip:text;color:transparent}
+.reviews-highlights{padding:17px 19px;background:#e9e4d8;border-left:2px solid #b69a62}
+.reviews-highlights-label{display:block;font-size:8px;letter-spacing:1.8px;color:#8a7145;margin-bottom:10px}
+.reviews-highlights p{font-family:'Playfair Display',serif;font-size:16px;line-height:1.5;color:#30483a;margin:7px 0}
